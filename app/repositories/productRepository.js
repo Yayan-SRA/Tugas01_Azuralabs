@@ -21,7 +21,7 @@ module.exports = {
     
     productFilter({kate}) {
         return Product.findAll({
-            where:{id_Category:kate},
+            where:{id_category:kate},
             include: [Category]
         });
     },
