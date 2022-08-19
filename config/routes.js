@@ -7,6 +7,7 @@ const apiRouter = express.Router();
  * TODO: Implement your own API
  *       implementations
  */
+apiRouter.get("/", controllers.api.v1.produkController.listProduk);
 apiRouter.get("/api/v1/listProduk", controllers.api.v1.produkController.listProduk);
 apiRouter.get("/api/v1/listKategori", controllers.api.v1.produkController.listKategori);
 apiRouter.get("/api/v1/detail/:id", controllers.api.v1.produkController.detailProduk);
