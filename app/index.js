@@ -4,7 +4,13 @@ const router = require("../config/routes");
 
 const app = express();
 
+/** Install request logger */
+app.use(morgan("dev"));
+
 /** Install JSON request parser */
 app.use(express.json());
 
-module.exports = router.apply(app)
+/** Install Router */
+app.use(router);
+
+module.exports = app;
