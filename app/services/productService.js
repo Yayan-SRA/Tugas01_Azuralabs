@@ -22,7 +22,7 @@ module.exports = {
   
   async productDetail({id}) {
     try {
-        const result = await productRepository.detailProduct({id});
+        const result = await productRepository.productDetail({id});
         return result;
     } catch (error) {
         throw err;
@@ -31,7 +31,7 @@ module.exports = {
 
   async productFilter({kate}) {
     try {
-        const result = await productRepository.filterProduct({kate});
+        const result = await productRepository.productFilter({kate});
         return result;
     } catch (error) {
         throw err;
