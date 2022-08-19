@@ -1,16 +1,10 @@
-const express = require("express");
-const morgan = require("morgan");
-const router = require("../config/routes");
+const express = require('express')
+const morgan = require('morgan')
+const router = require('./config/routes')
+const app = express()
 
-const app = express();
-
-/** Install request logger */
 app.use(morgan("dev"));
+app.use(express.json())
 
-/** Install JSON request parser */
-app.use(express.json());
+module.exports = router.apply(app)
 
-/** Install Router */
-app.use(router);
-
-module.exports = app;
