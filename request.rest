@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8000/api/v1/listProduk
+GET http://localhost:8000/api/v1/productList
 
 ###
 GET http://localhost:8000/api/v1/listKategori

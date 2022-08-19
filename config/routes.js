@@ -7,17 +7,17 @@ const apiRouter = express.Router();
  * TODO: Implement your own API
  *       implementations
  */
-apiRouter.get("/", controllers.api.v1.produkController.listProduk);
-apiRouter.get("/api/v1/listProduk", controllers.api.v1.produkController.listProduk);
-apiRouter.get("/api/v1/listKategori", controllers.api.v1.produkController.listKategori);
-apiRouter.get("/api/v1/detail/:id", controllers.api.v1.produkController.detailProduk);
-apiRouter.get("/api/v1/filter/:kategori", controllers.api.v1.produkController.filterProduk);
-apiRouter.post("/api/v1/create", controllers.api.v1.produkController.create);
-// apiRouter.put("/api/v1/posts/:id", controllers.api.v1.produkController.update);
-// apiRouter.get("/api/v1/posts/:id", controllers.api.v1.produkController.show);
+apiRouter.get("/", controllers.api.v1.productController.productList);
+apiRouter.get("/api/v1/productList", controllers.api.v1.productController.productList);
+apiRouter.get("/api/v1/categoryList", controllers.api.v1.productController.categoryList);
+apiRouter.get("/api/v1/detail/:id", controllers.api.v1.productController.productDetail);
+apiRouter.get("/api/v1/filter/:category", controllers.api.v1.productController.productFilter);
+apiRouter.post("/api/v1/create", controllers.api.v1.productController.create);
+// apiRouter.put("/api/v1/posts/:id", controllers.api.v1.productController.update);
+// apiRouter.get("/api/v1/posts/:id", controllers.api.v1.productController.show);
 // apiRouter.delete(
 //   "/api/v1/posts/:id",
-//   controllers.api.v1.produkController.destroy
+//   controllers.api.v1.productController.destroy
 // );
 
 /**

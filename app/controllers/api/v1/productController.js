@@ -1,9 +1,9 @@
-const produkService = require("../../../services/produkService")
+const productService = require("../../../services/productService")
 
 module.exports = {
-    listProduk(req,res) {
-        produkService
-        .listProduk()
+    productList(req,res) {
+        productService
+        .productList()
         .then((dataList) => {
             res.status(200).json({
                 status:"Berhasil Get Data",
@@ -18,9 +18,9 @@ module.exports = {
         })
     },
     
-    listKategori(req,res) {
-        produkService
-        .listKategori()
+    categoryList(req,res) {
+        productService
+        .categoryList()
         .then((kategoriList) => {
             res.status(200).json({
                 status:"Berhasil Get Data Kategori",
@@ -35,10 +35,10 @@ module.exports = {
         })
     },
 
-    detailProduk(req,res) {
+    productDetail(req,res) {
         const id = req.params.id
-        produkService
-        .detailProduk({id})
+        productService
+        .productDetail({id})
         .then((result) => {
             res.status(200).json({
                 status: "Berhasil get detail",
@@ -53,12 +53,12 @@ module.exports = {
         })
     },
 
-    filterProduk(req,res) {
-        console.log(req.params.kategori)
-        const kate = req.params.kategori
+    productFilter(req,res) {
+        console.log(req.params.category)
+        const kate = req.params.category
         console.log("tes",kate)
-        produkService
-        .filterProduk({kate})
+        productService
+        .productFilter({kate})
         .then((result) => {
             res.status(200).json({
                 status: "Berhasil get data",
@@ -74,29 +74,12 @@ module.exports = {
     },
 
     create(req, res) {
-        produkService
+        productService
           .create(req.body)
           .then((produk) => {
             res.status(201).json({
               status: "OK",
               data: produk,
-            });
-          })
-          .catch((err) => {
-            res.status(422).json({
-              status: "FAIL",
-              message: err.message,
-            });
-          });
-      },
-
-      create(req, res) {
-        produkService
-          .create(req.body)
-          .then((post) => {
-            res.status(201).json({
-              status: "OK",
-              data: post,
             });
           })
           .catch((err) => {

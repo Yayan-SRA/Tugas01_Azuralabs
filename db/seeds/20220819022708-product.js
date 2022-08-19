@@ -2,12 +2,12 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Produks', [{
-      id_kategori: 1,
-      nama_produk: "Fanta",
-      harga: "5000",
-      foto: "fanta.jpg",
-      deskripsi: "minuman soda dengan rasa enak",
+    await queryInterface.bulkInsert('Products', [{
+      id_category: 1,
+      product_name: "Fanta",
+      price: "5000",
+      image: "fanta.jpg",
+      describtion: "minuman soda dengan rasa enak",
       createdAt: new Date(),
       updatedAt: new Date(),
     }
