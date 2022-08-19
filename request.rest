@@ -3,18 +3,18 @@ POST http://localhost:8000/api/v1/create
 Content-Type: application/json
 
 {
-    "id_kategori":"1",
-    "nama_produk":"Fanta",
-    "harga":"5000",
-    "foto":"fanta.jpg",
-    "deskripsi": "minuman soda dengan rasa enak"
+    "id_category":"1",
+    "product_name":"Fanta",
+    "price":"5000",
+    "image":"fanta.jpg",
+    "describtion": "minuman soda dengan rasa enak"
 }
 
 ###
-GET http://localhost:8000/api/v1/productList
+GET http://localhost:8000/
 
 ###
-GET http://localhost:8000/api/v1/listKategori
+GET http://localhost:8000/api/v1/categoryList
 
 ###
 GET http://localhost:8000/api/v1/detail/1

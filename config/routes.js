@@ -8,7 +8,6 @@ const apiRouter = express.Router();
  *       implementations
  */
 apiRouter.get("/", controllers.api.v1.productController.productList);
-apiRouter.get("/api/v1/productList", controllers.api.v1.productController.productList);
 apiRouter.get("/api/v1/categoryList", controllers.api.v1.productController.categoryList);
 apiRouter.get("/api/v1/detail/:id", controllers.api.v1.productController.productDetail);
 apiRouter.get("/api/v1/filter/:category", controllers.api.v1.productController.productFilter);

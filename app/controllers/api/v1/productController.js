@@ -6,13 +6,13 @@ module.exports = {
         .productList()
         .then((dataList) => {
             res.status(200).json({
-                status:"Berhasil Get Data",
+                status:"Success",
                 data : dataList
             })
         })
         .catch((err) => {
             res.status(400).json({
-                status: "Gagal Get Data",
+                status: "Fail",
                 message : err.message,
             })
         })
@@ -21,15 +21,15 @@ module.exports = {
     categoryList(req,res) {
         productService
         .categoryList()
-        .then((kategoriList) => {
+        .then((list) => {
             res.status(200).json({
-                status:"Berhasil Get Data Kategori",
-                data : {posts : kategoriList}
+                status:"Success",
+                data : {posts : list}
             })
         })
         .catch((err) => {
             res.status(400).json({
-                status: "Gagal Get Data Kategori",
+                status: "Fail",
                 message : err.message,
             })
         })
@@ -41,13 +41,13 @@ module.exports = {
         .productDetail({id})
         .then((result) => {
             res.status(200).json({
-                status: "Berhasil get detail",
+                status: "Success",
                 data: result,
             })
         })
         .catch((err) => {
             res.status(400).json({
-                status: "Gagal get detail",
+                status: "Fail",
                 messaga: err.messaga,
             })
         })
@@ -61,13 +61,13 @@ module.exports = {
         .productFilter({kate})
         .then((result) => {
             res.status(200).json({
-                status: "Berhasil get data",
+                status: "Success",
                 data: result,
             })
         })
         .catch((err) => {
             res.status(400).json({
-                status: "Gagal get data",
+                status: "Fail",
                 messaga: err.messaga,
             })
         })
@@ -76,10 +76,10 @@ module.exports = {
     create(req, res) {
         productService
           .create(req.body)
-          .then((produk) => {
+          .then((product) => {
             res.status(201).json({
               status: "OK",
-              data: produk,
+              data: product,
             });
           })
           .catch((err) => {
